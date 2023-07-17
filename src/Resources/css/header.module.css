@@ -1,10 +1,9 @@
 
-.colorNav{
-    background-color: white;
-}
+
 .navLink{
     color:black;
-    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:larger;
     position: relative;
    margin-left: 10px;
    margin-right: 10px;
@@ -13,7 +12,7 @@
 .navLinkbtn{
     color:black;
     font-family:Arial, Helvetica, sans-serif;
-    font-size: large;
+    font-size:larger;
     position: relative;
    margin-left: 10px;
    margin-right: 10px;
@@ -37,10 +36,11 @@
     transform: scaleX(0);
     transition: all 0.4s ease-in-out 0s;
 }
-.navLink:hover:before{
+.navLink:before{
     visibility: visible;
     transform: scaleX(1);
 }
+
 
 
 
