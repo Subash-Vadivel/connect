@@ -3,10 +3,135 @@ import Footer from './Footer'
 import React, { useState } from 'react';
 import Web3 from 'web3';
 import busdABI from './busdAPI.json';
+import Card from 'react-bootstrap/Card';
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Button from "react-bootstrap/Button";
+import { Container } from 'react-bootstrap';
 export default function Donate() {
     const [receiverAddress, setReceiverAddress] = useState('');
   const [amountToSend, setAmountToSend] = useState('');
+  const [cards,setcards]=useState([
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
+    {
+      title: "Heart Attack",
+      name: "annamalai",
+      targetaddress: "0xdsghdsdhsdjhsdsjh",
+      amount: 10000,
+      desc:"sjdhjsdhshbhsbf bskfsfkskjfh kjsfhskjf",
+      duetime:"24-12-2023",
+      check:true
+    },
 
+  ]);
   const handleSendBUSD = async () => {
     if (!receiverAddress || !amountToSend) {
       alert('Please fill all the required fields.');
@@ -65,6 +190,41 @@ export default function Donate() {
       </label>
       <button onClick={handleSendBUSD}>Send BUSD</button>
     </div>
+
+
+    <Container style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+  {cards.map((data, index) => (
+    <Card key={index} style={{ width: '30rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+          <div>
+            <Card.Title>{data.name}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{data.title}</Card.Subtitle>
+          </div>
+          {data.check ? (
+            <Card.Title style={{ color: 'red' }}>
+              <span className="colored-circle" style={{ backgroundColor: 'red' }} />Live
+            </Card.Title>
+          ) : (
+            <Card.Title style={{ color: 'black' }}>
+              <span className="colored-circle" style={{ backgroundColor: 'black' }} />Ended
+            </Card.Title>
+          )}
+        </div>
+        <Card.Text>
+          <p>{data.desc}</p>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Button className="nextBtn">View</Button>
+            <Button className="trackBtn">Donate</Button>
+          </div>
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  ))}
+</Container>
+
+
     <Footer/>
     </>
   )

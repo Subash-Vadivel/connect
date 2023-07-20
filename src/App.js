@@ -19,7 +19,6 @@ export default function App() {
       </Route>
       <Route  path="/donate" element={<Donate/>}/>
       <Route path="/transactions" element={<Transaction/>}/>
-      
     </Routes>
     </Authentication>
     </BrowserRouter>
