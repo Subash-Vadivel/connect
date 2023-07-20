@@ -1,0 +1,117 @@
+/* Header CSS */
+.colNav{
+    background-color: black;
+}
+.navLink{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:large ;
+    position: relative;
+   margin-left: 10px;
+   margin-right: 10px;
+
+}
+.navLinkbtn{
+    color: #ED117F;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:larger;
+    position: relative;
+   margin-left: 10px;
+   margin-right: 10px;
+
+}
+.navLinkbtn:hover{
+     color: #ED117F;
+}
+.navLink:hover{
+    color: #4DA3DF ;
+}
+
+.navLink:before
+{  
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    margin: -5px 0;
+   
+    background-color:#ED117F; /*Follow your text color*/
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+}
+.navLink:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+.logoWrapper{
+    width: 100px;
+    text-align: center;
+}
+.logoWrapper >img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* App CSS */
+
+
+
+.titlerequest{
+    color: #ED117F;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer css */
+.footLi{  
+    color:white;
+    font-size: large;
+    margin-right: 30px;
+    margin-left: 60px;
+}
+.footLi>li{  
+   margin-top: 10px;
+}
+
+.footLi>li:hover{  
+    color:#e43e91;
+    cursor: pointer;
+ }
+.footerMain{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color:#4DA3DF;
+    /* background: linear-gradient(90deg, rgba(92,27,156,1) 0%, rgba(131,59,197,1) 56%, rgba(125,90,229,1) 100%, rgba(12,132,156,1) 100%); */
+}
+.footerEnd{
+    text-align: center;
+    background-color: white;
+}
+
+.footerEndTxt{
+    font-weight: 600; 
+    padding-top: 10px;   
+}
+.footerTop{
+     text-align: center;
+}
+.footerTopItem>img{
+    padding-top: 10px;
+    padding-bottom: 10px;
+      width: 200px;
+}

@@ -2,13 +2,12 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-export default function Home() {
+export default function Donate() {
   return (
     <>
-<Header/>
-<div>Home</div>
-<Footer/>
-
+    <Header/>
+    <div>Donate</div>
+    <Footer/>
     </>
   )
 }
